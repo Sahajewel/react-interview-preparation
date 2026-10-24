@@ -2,6 +2,7 @@ import { useState } from "react";
 
 import "./App.css";
 import LiveUpdate from "./LiveUpdate";
+import TodoList from "./TodoList";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -23,6 +24,7 @@ function App() {
         <button onClick={() => setCount((prev) => prev + 1)}>➕Increase</button>
       </div>
       <LiveUpdate />
+      <TodoList />
     </div>
   );
 }
