@@ -1,23 +1,28 @@
 import { useState } from "react";
 
 import "./App.css";
+import LiveUpdate from "./LiveUpdate";
 
 function App() {
   const [count, setCount] = useState(0);
   return (
     <div>
       <h1>
-        Couter <span>{count}</span>
+        Counter <span>{count}</span>
       </h1>
       <div>
-        <button onClick={() => setCount(count - 1)} style={{ marginRight: 10 }}>
+        <button
+          onClick={() => setCount((prev) => prev - 1)}
+          style={{ marginRight: 10 }}
+        >
           ➖Decrease
         </button>
         <button onClick={() => setCount(0)} style={{ marginRight: 10 }}>
           🔄Reset
         </button>
-        <button onClick={() => setCount(count + 1)}>➕Increase</button>
+        <button onClick={() => setCount((prev) => prev + 1)}>➕Increase</button>
       </div>
+      <LiveUpdate />
     </div>
   );
 }
