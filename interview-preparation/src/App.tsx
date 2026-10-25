@@ -4,6 +4,7 @@ import "./App.css";
 import LiveUpdate from "./LiveUpdate";
 import TodoList from "./TodoList";
 import Toggle from "./Toggle";
+import Form from "./Form";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -27,6 +28,7 @@ function App() {
       <LiveUpdate />
       <TodoList />
       <Toggle />
+      <Form />
     </div>
   );
 }
