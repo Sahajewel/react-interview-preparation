@@ -3,6 +3,7 @@ import { useState } from "react";
 import "./App.css";
 import LiveUpdate from "./LiveUpdate";
 import TodoList from "./TodoList";
+import Toggle from "./Toggle";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -25,6 +26,7 @@ function App() {
       </div>
       <LiveUpdate />
       <TodoList />
+      <Toggle />
     </div>
   );
 }
