@@ -5,6 +5,7 @@ import LiveUpdate from "./LiveUpdate";
 import TodoList from "./TodoList";
 import Toggle from "./Toggle";
 import Form from "./Form";
+import SearchFilter from "./SearchFilter";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -29,6 +30,7 @@ function App() {
       <TodoList />
       <Toggle />
       <Form />
+      <SearchFilter />
     </div>
   );
 }

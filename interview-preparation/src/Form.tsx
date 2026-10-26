@@ -26,6 +26,7 @@ export default function Form() {
   return (
     <div>
       <h1>Form Validation</h1>
+
       {error && <p style={{ color: "red" }}>{error}</p>}
       {success && <p style={{ color: "green" }}>{success}</p>}
       <form onSubmit={handleForm}>
