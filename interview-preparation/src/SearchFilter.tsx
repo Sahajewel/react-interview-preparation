@@ -26,7 +26,7 @@ export default function SearchFilter() {
   );
 
   return (
-    <div style={{ marginBottom: "300px" }}>
+    <div>
       <h1>Search and Filter</h1>
       <input
         type="text"
