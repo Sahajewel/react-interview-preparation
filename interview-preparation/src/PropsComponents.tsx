@@ -17,7 +17,7 @@ export default function PropsComponents() {
     setNewCount(newCount + 1);
   };
   return (
-    <div style={{ marginBottom: "300px" }}>
+    <div>
       <h1>Props and Components</h1>
       <ChildComponents names={names} onAdd={handleAddName} />
     </div>

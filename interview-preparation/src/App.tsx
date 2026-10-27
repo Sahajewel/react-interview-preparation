@@ -7,6 +7,7 @@ import Toggle from "./Toggle";
 import Form from "./Form";
 import SearchFilter from "./SearchFilter";
 import PropsComponents from "./PropsComponents";
+import DataFetch from "./DataFetch";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -33,6 +34,7 @@ function App() {
       <Form />
       <SearchFilter />
       <PropsComponents />
+      <DataFetch />
     </div>
   );
 }
