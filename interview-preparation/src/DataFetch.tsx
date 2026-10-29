@@ -7,8 +7,10 @@ interface Post {
 }
 export default function DataFetch() {
   const [post, setPost] = useState<Post[]>([]);
-  const [loding, setLoading] = useState<boolean>(true);
+  const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string>("");
+  const [currentPage, setCurrentPage] = useState<number>(1);
+  const itemsPerPage = 10;
   useEffect(() => {
     fetch("https://jsonplaceholder.typicode.com/posts")
       .then((res) => {
@@ -26,19 +28,53 @@ export default function DataFetch() {
         setLoading(false);
       });
   }, []);
+
+  // pagination calculation
+
+  const totalPages = Math.ceil(post.length / itemsPerPage);
+  const startIndex = (currentPage - 1) * itemsPerPage;
+  const endIndex = startIndex + itemsPerPage;
+  const currentPosts = post.slice(startIndex, endIndex);
+
+  const handlePrev = () => {
+    if (currentPage > 1) {
+      setCurrentPage((prev) => prev - 1);
+    }
+  };
+  const handleNext = () => {
+    if (currentPage < totalPages) {
+      setCurrentPage((prev) => prev + 1);
+    }
+  };
   return (
     <div style={{ marginBottom: "300px" }}>
-      <h1>Api Data Fetching... {post.length}</h1>
-      {loding && <p>Loading Posts...</p>}
+      <h1>
+        Api Data Fetching... (Page {currentPage} of {totalPages})
+      </h1>
+      {loading && <p>Loading Posts...</p>}
       {error && <p style={{ color: "red" }}>Error: {error}</p>}
       <div>
-        {post.map((singlePost, index) => (
-          <div key={index}>
+        {currentPosts.map((singlePost) => (
+          <div key={singlePost.id}>
             <h4>{singlePost.title}</h4>
             <p>{singlePost.body}</p>
           </div>
         ))}
       </div>
+
+      {!loading && !error && (
+        <div>
+          <button onClick={handlePrev} disabled={currentPage === 1}>
+            Previus
+          </button>
+          <span>
+            Page {currentPage} of {totalPages}
+          </span>
+          <button onClick={handleNext} disabled={currentPage === totalPages}>
+            Next
+          </button>
+        </div>
+      )}
     </div>
   );
 }
