@@ -8,6 +8,7 @@ import Form from "./Form";
 import SearchFilter from "./SearchFilter";
 import PropsComponents from "./PropsComponents";
 import DataFetch from "./DataFetch";
+import Counter from "./Counter";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -35,6 +36,7 @@ function App() {
       <SearchFilter />
       <PropsComponents />
       <DataFetch />
+      <Counter />
     </div>
   );
 }

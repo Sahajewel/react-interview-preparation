@@ -47,7 +47,7 @@ export default function DataFetch() {
     }
   };
   return (
-    <div style={{ marginBottom: "300px" }}>
+    <div>
       <h1>
         Api Data Fetching... (Page {currentPage} of {totalPages})
       </h1>
