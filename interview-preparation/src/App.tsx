@@ -9,6 +9,8 @@ import SearchFilter from "./SearchFilter";
 import PropsComponents from "./PropsComponents";
 import DataFetch from "./DataFetch";
 import Counter from "./Counter";
+import UseCounter from "./UseCounter";
+import ShoppingCart from "./ShoppingCart";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -37,6 +39,8 @@ function App() {
       <PropsComponents />
       <DataFetch />
       <Counter />
+      <UseCounter />
+      <ShoppingCart />
     </div>
   );
 }
