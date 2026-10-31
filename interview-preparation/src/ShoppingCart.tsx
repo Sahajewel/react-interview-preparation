@@ -83,7 +83,7 @@ export default function ShoppingCart() {
     0,
   );
   return (
-    <div style={{ marginBottom: "300px" }}>
+    <div>
       <h1>Shopping Cart</h1>
       {products.map((product) => (
         <div key={product.id}>

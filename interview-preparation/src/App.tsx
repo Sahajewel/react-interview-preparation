@@ -11,6 +11,7 @@ import DataFetch from "./DataFetch";
 import Counter from "./Counter";
 import UseCounter from "./UseCounter";
 import ShoppingCart from "./ShoppingCart";
+import ThemeToggle from "./ThemeToggle";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -41,6 +42,7 @@ function App() {
       <Counter />
       <UseCounter />
       <ShoppingCart />
+      <ThemeToggle />
     </div>
   );
 }
