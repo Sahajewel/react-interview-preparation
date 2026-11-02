@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { useState } from "react";
+import { useDebounce } from "./useDebounce";
 
 export default function SearchFilter() {
   const [userName, setUserName] = useState("");
@@ -7,6 +8,7 @@ export default function SearchFilter() {
   const [success, setSuccess] = useState("");
   const [error, setError] = useState("");
   const [search, setSearch] = useState("");
+  const debounceText = useDebounce(search, 500);
   const handleFormUser = (e: any) => {
     e.preventDefault();
     setSuccess("");
@@ -22,7 +24,7 @@ export default function SearchFilter() {
     setUserName("");
   };
   const filterUser = allUser.filter((user) =>
-    user.toLowerCase().includes(search.trim().toLowerCase()),
+    user.toLowerCase().includes(debounceText.trim().toLowerCase()),
   );
 
   return (

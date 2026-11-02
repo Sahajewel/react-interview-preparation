@@ -34,7 +34,7 @@ function ThemeBox() {
     <div
       style={{
         padding: "20px",
-        marginBottom: "300px",
+
         background: theme === "light" ? "#fff" : "#222",
         color: theme === "light" ? "#000" : "#fff",
       }}
