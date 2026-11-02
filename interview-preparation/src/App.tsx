@@ -12,6 +12,7 @@ import Counter from "./Counter";
 import UseCounter from "./UseCounter";
 import ShoppingCart from "./ShoppingCart";
 import ThemeToggle from "./ThemeToggle";
+import ApplyUseToggle from "./ApplyUseToggle";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -43,6 +44,7 @@ function App() {
       <UseCounter />
       <ShoppingCart />
       <ThemeToggle />
+      <ApplyUseToggle />
     </div>
   );
 }
