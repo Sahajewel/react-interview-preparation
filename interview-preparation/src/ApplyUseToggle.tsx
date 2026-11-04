@@ -1,9 +1,9 @@
-import { useToggle } from "./UseToggle";
+import { useToggle } from "./useToggle";
 
 export default function ApplyUseToggle() {
   const [isOpen, setIsOpen] = useToggle();
   return (
-    <div style={{ marginBottom: "300px" }}>
+    <div>
       <h1>Apply Use Toggle</h1>
       <button onClick={setIsOpen}>{isOpen ? "Hide" : "open"}</button>
       {isOpen && <p>Hello</p>}
