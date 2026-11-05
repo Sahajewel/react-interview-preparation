@@ -13,7 +13,7 @@ export default function Users() {
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error:{error}</p>;
   return (
-    <div style={{ marginBottom: "300px" }}>
+    <div>
       <h1>Users:{data?.slice(0, 2).length}</h1>
       <ul style={{ listStyle: "none" }}>
         {data?.slice(0, 2).map((user) => (

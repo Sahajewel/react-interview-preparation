@@ -14,6 +14,7 @@ import ShoppingCart from "./ShoppingCart";
 import ThemeToggle from "./ThemeToggle";
 import ApplyUseToggle from "./ApplyUseToggle";
 import Users from "./Users";
+import ModalDemo from "./ModalDemo";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -47,6 +48,7 @@ function App() {
       <ThemeToggle />
       <ApplyUseToggle />
       <Users />
+      <ModalDemo />
     </div>
   );
 }
