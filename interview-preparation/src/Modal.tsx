@@ -1,9 +1,9 @@
-import { useEffect, type ReactNode } from "react";
+import { useEffect, type ReactElement } from "react";
 
 type ModalProps = {
   isOpen: boolean;
   onClose: () => void;
-  children: ReactNode;
+  children: ReactElement;
 };
 export default function Modal({ isOpen, onClose, children }: ModalProps) {
   useEffect(() => {
@@ -21,6 +21,7 @@ export default function Modal({ isOpen, onClose, children }: ModalProps) {
       style={{
         position: "fixed",
         inset: 0,
+
         background: "rgba(0,0,0,0.5",
         display: "flex",
         justifyContent: "center",

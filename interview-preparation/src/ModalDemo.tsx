@@ -7,8 +7,10 @@ export default function ModalDemo() {
     <div style={{ marginBottom: "300px" }}>
       <button onClick={() => setIsOpen(true)}>Open Modal</button>
       <Modal isOpen={isOpen} onClose={() => setIsOpen(false)}>
-        <h2>Hello</h2>
-        <p>This is my first Modal</p>
+        <div>
+          <h1>saha</h1>
+          <p>ami jewel</p>
+        </div>
       </Modal>
     </div>
   );
