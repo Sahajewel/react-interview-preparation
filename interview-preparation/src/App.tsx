@@ -16,6 +16,7 @@ import ApplyUseToggle from "./ApplyUseToggle";
 import Users from "./Users";
 import ModalDemo from "./ModalDemo";
 import NameInput from "./NameInput";
+import CallbackDemo from "./CallbackDemo";
 // import InfiniteScroll from "./InfiniteScroll";
 
 function App() {
@@ -53,6 +54,7 @@ function App() {
       <ModalDemo />
       {/* <InfiniteScroll /> */}
       <NameInput />
+      <CallbackDemo />
     </div>
   );
 }
