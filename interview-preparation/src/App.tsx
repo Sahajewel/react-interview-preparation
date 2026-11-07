@@ -15,7 +15,8 @@ import ThemeToggle from "./ThemeToggle";
 import ApplyUseToggle from "./ApplyUseToggle";
 import Users from "./Users";
 import ModalDemo from "./ModalDemo";
-import InfiniteScroll from "./InfiniteScroll";
+import NameInput from "./NameInput";
+// import InfiniteScroll from "./InfiniteScroll";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -50,7 +51,8 @@ function App() {
       <ApplyUseToggle />
       <Users />
       <ModalDemo />
-      <InfiniteScroll />
+      {/* <InfiniteScroll /> */}
+      <NameInput />
     </div>
   );
 }

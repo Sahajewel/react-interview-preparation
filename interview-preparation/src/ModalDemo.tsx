@@ -4,7 +4,7 @@ import Modal from "./Modal";
 export default function ModalDemo() {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <div style={{ marginBottom: "300px" }}>
+    <div>
       <button onClick={() => setIsOpen(true)}>Open Modal</button>
       <Modal isOpen={isOpen} onClose={() => setIsOpen(false)}>
         <div>

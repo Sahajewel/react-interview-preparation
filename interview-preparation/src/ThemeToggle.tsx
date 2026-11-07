@@ -1,4 +1,5 @@
-import { createContext, useContext, useState, type ReactNode } from "react";
+import { createContext, useContext, type ReactNode } from "react";
+import { useLocationStorage } from "./useLocalStorage";
 
 type Theme = "light" | "dark";
 
@@ -10,7 +11,7 @@ type themeContentType = {
 const ThemeContext = createContext<themeContentType | null>(null);
 
 function ThemeProvider({ children }: { children: ReactNode }) {
-  const [theme, setTheme] = useState<Theme>("light");
+  const [theme, setTheme] = useLocationStorage<Theme>("theme", "light");
   const toggleTheme = () => {
     setTheme((prev) => (prev === "light" ? "dark" : "light"));
   };
