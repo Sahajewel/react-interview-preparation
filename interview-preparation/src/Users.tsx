@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { useFetch } from "./useFetch";
 
 type User = {
@@ -13,12 +14,14 @@ export default function Users() {
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error:{error}</p>;
   return (
-    <div>
+    <div style={{ marginBottom: "200px" }}>
       <h1>Users:{data?.slice(0, 2).length}</h1>
       <ul style={{ listStyle: "none" }}>
         {data?.slice(0, 2).map((user) => (
           <li key={user.id}>
-            {user.name} ({user.email})
+            <Link to={`/users/${user.id}`}>
+              {user.name} ({user.email})
+            </Link>
           </li>
         ))}
       </ul>

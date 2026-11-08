@@ -11,7 +11,7 @@ export default function CallbackDemo() {
   }, []);
 
   return (
-    <div style={{ marginBottom: "200px" }}>
+    <div >
       <button onClick={() => setCount(count + 1)}>Count: {count}</button>
       <Child onClick={handleClick} />
     </div>

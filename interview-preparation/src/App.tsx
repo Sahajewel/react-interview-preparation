@@ -17,6 +17,7 @@ import Users from "./Users";
 import ModalDemo from "./ModalDemo";
 import NameInput from "./NameInput";
 import CallbackDemo from "./CallbackDemo";
+import RouteLink from "./routes/Routes";
 // import InfiniteScroll from "./InfiniteScroll";
 
 function App() {
@@ -55,6 +56,7 @@ function App() {
       {/* <InfiniteScroll /> */}
       <NameInput />
       <CallbackDemo />
+      <RouteLink />
     </div>
   );
 }
